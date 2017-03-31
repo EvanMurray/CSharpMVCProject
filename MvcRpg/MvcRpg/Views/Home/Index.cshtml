@@ -1,0 +1,31 @@
+﻿@model MvcRpg.Models.ViewModels
+@section Scripts
+{
+
+    <script src="@Url.Content("~/Scripts/GameButtonHandler.js")"></script>
+     
+}
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div id="Wrapper">
+    <div class="row">
+
+        <div class="col-md-6">
+            @Html.Action("RenderGame")
+        </div>
+
+        <div class="col-md-6">
+            <div id="RenderPlayer">
+            @Html.Action("RenderPlayer")
+            </div>
+            <div id="RenderMonster">
+            @Html.Action("RenderMonster")
+            </div>
+      
+
+        </div>
+    </div> 
+</div>

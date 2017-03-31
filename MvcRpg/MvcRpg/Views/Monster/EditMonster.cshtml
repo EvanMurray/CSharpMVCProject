@@ -1,0 +1,61 @@
+﻿@model MvcRpg.Models.MonsterModels
+
+<h2>EditMonster</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Monster</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.stats.Health)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.stats.Health)
+            @Html.ValidationMessageFor(model => model.stats.Health)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.stats.Mana)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.stats.Mana)
+            @Html.ValidationMessageFor(model => model.stats.Mana)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.stats.Strength)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.stats.Strength)
+            @Html.ValidationMessageFor(model => model.stats.Strength)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Exp)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Exp)
+            @Html.ValidationMessageFor(model => model.Exp)
+        </div>
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "MonsterManager", "Home")
+</div>

@@ -1,0 +1,5 @@
+C:\Users\Evan\documents\visual studio 2015\Projects\MvcRpg\Common\bin\Debug\Common.dll
+C:\Users\Evan\documents\visual studio 2015\Projects\MvcRpg\Common\bin\Debug\Common.pdb
+C:\Users\Evan\documents\visual studio 2015\Projects\MvcRpg\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Evan\documents\visual studio 2015\Projects\MvcRpg\Common\obj\Debug\Common.dll
+C:\Users\Evan\documents\visual studio 2015\Projects\MvcRpg\Common\obj\Debug\Common.pdb

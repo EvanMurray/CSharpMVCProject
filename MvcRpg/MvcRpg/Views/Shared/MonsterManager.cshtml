@@ -1,0 +1,68 @@
+﻿@model MvcRpg.Models.ViewModels
+@{
+    ViewBag.Title = "MonsterManager";
+}
+
+<h2>Monster Manager</h2>
+
+<!--List of Monsters
+    <ul>
+    foreach(monster in Model.Monsters)
+    {
+        <li>
+            <p>monster.Name</p>h
+            <p>monster.Stats.Strengt</p>
+            <p>monster.Stats.Health</p>
+            <p>monster.Stats.Mana</p>
+        </li>
+    }-->
+   <!--Input for more monsters-->
+@using (Html.BeginForm("AddMonster", "Monster"))
+{
+    <style>
+        
+        li {
+            margin-bottom: 5px;
+        }
+
+        .monsterButton {
+            margin-left: 10px;
+        }
+
+    </style>
+
+        <div class="container" style="float: left; width: 50%;">
+            <h4>Create a Monster</h4>
+            <ul style="list-style:none;  padding-left: 0px;">
+                <li><p>Name</p><input type="text" name="monsterName"/></li>
+                <li><p>Health</p><input type="number" name="monsterHealth"/></li>
+                <li><p>Mana</p><input type="number" name="monsterMana"/></li>
+                <li><p>Strength</p><input type="number" name="monsterStrength" /></li>
+                <li><p>Exp</p><input type="number" name="monsterExp"/></li>
+            </ul>
+            <input type="submit" />
+
+        </div>
+}
+        <div class="container" style="float:right; width: 50%;">
+            <h4>List of Monsters</h4>
+            <ul style="list-style: none; padding-left: 0px;">
+                @foreach (var monster in Model.Monster.Monsters)
+                {
+                    <li class="well" style="padding: 8px; overflow: hidden; font-size: 1.25em;">
+                        @monster.toText()
+                        <span style="float: right;"> 
+                        @Html.ActionLink("Delete", "DeleteMonster", "Monster", new { id = monster.Id }, new { @class = "btn btn-danger" }) 
+                        @Html.ActionLink("Edit", "EditMonster", "Monster", new { id = monster.Id }, new { @class = "btn btn-primary" })
+                        </span>
+                        
+                    </li>
+                }
+            </ul>
+
+        </div>
+    
+
+
+
+
